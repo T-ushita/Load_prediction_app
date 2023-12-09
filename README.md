@@ -1,18 +1,19 @@
 # Load_prediction_app
-Objective
+
+## Objective
 This machine learning project aims to create a robust ML model and a corresponding web application for status of loan approval process. The goal is to use this system to classify loan applicants, determining whether they should be granted a loan or not.
 
-Evaluation Criteria
+## Evaluation Criteria
 Submissions will be assessed based on the F1 Score, ensuring the effectiveness of the model in accurately classifying loan applicants.
 
-Data
+## Data
 About the Data
 The dataset comprises information about loan applicants, encompassing 12 independent columns and 1 dependent column. Notable attributes include Loan ID, gender, marital status, education level, applicant's income, and more.
 
-Dataset
+## Dataset
 Train and test datasets are provided in repo.
 
-Data Description
+## Data Description
 Loan_ID: A unique identifier assigned to each loan applicant.
 Gender: Gender of the applicant (Male, Female).
 Married: Marital status of the applicant (Yes, No).
@@ -28,10 +29,11 @@ Property_Area: The type of location where the applicant’s property lies (Rural
 Target
 Loan_Status: Indicates whether the loan was granted or not (Y, N).
 
-
+## Deployment
 Executed in Google cloud console using docker containers and Google Kubernetes Engine
 Run commands in Active cloud shell
 
+Follow the commands on gcp cloud shell
 1.	Clone Git repository
 git clone https://github.com/T-ushita/Load_prediction_app
 2.	Change the directory to Loan Prediction App

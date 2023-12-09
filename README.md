@@ -37,23 +37,23 @@ Run commands in Active cloud shell
 Follow the commands on gcp cloud shell
 1.	Clone Git repository: git clone https:
 * //github.com/T-ushita/Load_prediction_app
-3.	Change the directory to Loan Prediction App:
+2.	Change the directory to Loan Prediction App:
 * cd Load_prediction_app/
-5.	Set Project ID Environment Variable:
+3.	Set Project ID Environment Variable:
 * export PROJECT_ID=assignment_project
-7.	Build Docker Image:
+4.	Build Docker Image:
 * docker build -t gcr.io/${PROJECT_ID}/loan_prediction-app:v1
-9.	View Docker images:
+5.	View Docker images:
 * docker images
-11.	Authenticate Container registry and Upload the container image:
+6.	Authenticate Container registry and Upload the container image:
 * gcloud auth configure-docker
 * docker push gcr.io/${PROJECT_ID}/loan_prediction_app:v1
-8.	Create Cluster:
+7.	Create Cluster:
 * gcloud config set project $PROJECT_ID 
 * gcloud config set compute/zone us-central1
 * gcloud container clusters create prediction-cluster --num-nodes=2
-10.	Deploy Application: 
+8.	Deploy Application: 
 * kubectl create deployment prediction-app --image=gcr.io/${PROJECT_ID}/prediction-app:v1
-11.	Expose application to internet:
+9.	Expose application to internet:
 * kubectl expose deployment prediction-app --type=LoadBalancer --port 80 --target-port 8080
 * kubectl get service
